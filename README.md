@@ -4,6 +4,7 @@ Mac os 打印log日志在本地文件
 
 ## 1.初始化
 ```
+#import <LogStr/LogStr.h>
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
  // Insert code here to initialize your application
  
