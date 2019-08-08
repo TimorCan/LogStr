@@ -22,7 +22,7 @@ Mac os 打印log日志在本地文件
 ## 2. Log 使用
 
 ```
-# import \<LogStr/util.h\>
+# import <LogStr/util.h>
  
  logstr(@"viewDidLoad ...........");
 ```
