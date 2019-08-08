@@ -16,15 +16,15 @@ Mac os 打印log日志在本地文件
  
  //自定义配置位置
  [log settingLogPath:@"/vault/Station/log.log"]();
- 
- 
- 
- 
  }
  ```
 `
 ## 2. Log 使用
-# import \<LogStr/util.h\>
+
+```
+`# import \<LogStr/util.h\>
  
  logstr(@"viewDidLoad ...........");
+```
+`
 
