@@ -7,7 +7,7 @@
 //
 
 #import "LogStr.h"
-#import "util.h"
+
 #define filePathKey @"filePathKey.station.ict.log"
 
 
