@@ -23,9 +23,9 @@ Mac os 打印log日志在本地文件
 ## 2. Log 使用
 
 ```
-# import <LogStr/util.h>
+# import \<LogStr/LogStr.h\>
  
  logstr(@"viewDidLoad ...........");
-```
-
+ICTLog(@"李爱思是个憨批");
+\`\`\`
 

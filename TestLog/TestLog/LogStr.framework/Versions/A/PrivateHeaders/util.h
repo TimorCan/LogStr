@@ -9,6 +9,6 @@
 #ifndef util_h
 #define util_h
 
-void logstr(NSString *str);
+
 
 #endif /* util_h */

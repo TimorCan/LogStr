@@ -21,9 +21,9 @@
     //下面两种2选1
     
     //使用默认配置，log在桌面输出
-    // [log syncLogSetting];
+     [log syncLogSetting];
     //自定义配置位置
-    [log settingLogPath:@"/vault/Station/log.log"];
+    //[log settingLogPath:@"/vault/Station/log.log"];
 }
 
 

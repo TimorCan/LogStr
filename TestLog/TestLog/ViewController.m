@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <LogStr/util.h>
+#import <LogStr/LogStr.h>
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -16,7 +16,7 @@
     // Do any additional setup after loading the view.
     
     logstr(@"viewDidLoad ...........");
-    
+    ICTLog(@"李爱思是个憨批");
 }
 
 

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		553C926222FC017C007F507F /* LogStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C926022FC017C007F507F /* LogStr.m */; };
 		553C926322FC017C007F507F /* LogStr.h in Headers */ = {isa = PBXBuildFile; fileRef = 553C926122FC017C007F507F /* LogStr.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		553C926622FC0182007F507F /* util.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C926422FC0182007F507F /* util.m */; };
-		553C926722FC0182007F507F /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 553C926522FC0182007F507F /* util.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,8 +16,6 @@
 		553C925922FC013A007F507F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553C926022FC017C007F507F /* LogStr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogStr.m; sourceTree = "<group>"; };
 		553C926122FC017C007F507F /* LogStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogStr.h; sourceTree = "<group>"; };
-		553C926422FC0182007F507F /* util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = util.m; sourceTree = "<group>"; };
-		553C926522FC0182007F507F /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +50,6 @@
 			children = (
 				553C926122FC017C007F507F /* LogStr.h */,
 				553C926022FC017C007F507F /* LogStr.m */,
-				553C926522FC0182007F507F /* util.h */,
-				553C926422FC0182007F507F /* util.m */,
 				553C925922FC013A007F507F /* Info.plist */,
 			);
 			path = LogStr;
@@ -69,7 +63,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				553C926322FC017C007F507F /* LogStr.h in Headers */,
-				553C926722FC0182007F507F /* util.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				553C926222FC017C007F507F /* LogStr.m in Sources */,
-				553C926622FC0182007F507F /* util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@
 		553C927B22FC03AA007F507F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553C927A22FC03AA007F507F /* Assets.xcassets */; };
 		553C927E22FC03AA007F507F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553C927C22FC03AA007F507F /* Main.storyboard */; };
 		553C928122FC03AA007F507F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C928022FC03AA007F507F /* main.m */; };
-		553C928D22FC0643007F507F /* LogStr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C928C22FC0642007F507F /* LogStr.framework */; };
+		55E4E5D52303EB9400CBAB96 /* LogStr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E4E5D42303EB9400CBAB96 /* LogStr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		553C927F22FC03AA007F507F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553C928022FC03AA007F507F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		553C928222FC03AA007F507F /* TestLog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestLog.entitlements; sourceTree = "<group>"; };
-		553C928C22FC0642007F507F /* LogStr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LogStr.framework; sourceTree = "<group>"; };
+		55E4E5D42303EB9400CBAB96 /* LogStr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LogStr.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553C928D22FC0643007F507F /* LogStr.framework in Frameworks */,
+				55E4E5D52303EB9400CBAB96 /* LogStr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +60,7 @@
 		553C927322FC03A8007F507F /* TestLog */ = {
 			isa = PBXGroup;
 			children = (
-				553C928C22FC0642007F507F /* LogStr.framework */,
+				55E4E5D42303EB9400CBAB96 /* LogStr.framework */,
 				553C927422FC03A8007F507F /* AppDelegate.h */,
 				553C927522FC03A8007F507F /* AppDelegate.m */,
 				553C927722FC03A8007F507F /* ViewController.h */,

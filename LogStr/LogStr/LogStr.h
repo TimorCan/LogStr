@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "util.h"
+
+
+#define ICTLog(str) ZCLog([NSString stringWithFormat:@"%s第(%d)行:%@",__FUNCTION__,__LINE__,str]);
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 /******Log 初始化***********
@@ -58,6 +63,9 @@ NS_ASSUME_NONNULL_BEGIN
 //log 位置
 - (NSString *)path;
 
+
+void logstr(NSString *str);
+void ZCLog(NSString *str);
 @end
 
 
