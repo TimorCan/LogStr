@@ -10,7 +10,7 @@
 #import "util.h"
 
 
-#define ICTLog(str) ZCLog([NSString stringWithFormat:@"%s第(%d)行:%@",__FUNCTION__,__LINE__,str]);
+#define ICTLog(str) ZCLog([NSString stringWithFormat:@"%s第(%d)行:%@",__FUNCTION__,__LINE__,str])
 
 
 NS_ASSUME_NONNULL_BEGIN
