@@ -44,7 +44,15 @@ static LogStr *_instance;
     
     NSString * path1 = [self cmd:@"cd ~/Desktop/; pwd"];
     NSString * path2 = [path1 stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    NSString * path = [NSString stringWithFormat:@"%@/loginfo.log",path2];
+    
+    NSString * cPath = @"loginfo";
+    
+    if (self.currentPath != nil && [self.currentPath isEqualToString:@""]==NO) {
+        cPath = self.currentPath;
+    }
+    
+    
+    NSString * path = [NSString stringWithFormat:@"%@/%@.log",path2,cPath];
     
    
     
@@ -173,6 +181,19 @@ static LogStr *_instance;
 
 
 //#define vags [NSString stringWithFormat:(s),##__VA_ARGS__]
+//function:(char*)functionName lineNumber:(int)lineNumber format:(NSString*)format,...
+
++ (void)function:(char*)functionName lineNumber:(int)lineNumber format:(NSString*)format,...{
+    va_list ap;
+    va_start(ap,format);
+    NSString*print = [[NSString alloc] initWithFormat: format arguments: ap];
+    
+    ZCLog([NSString stringWithFormat:@"【fucntion:%s】【Line:%d】【arguments：%@】",functionName,lineNumber,print]);
+    
+}
+
+
+
 
 void ZCLog(NSString *str){
     
@@ -228,3 +249,4 @@ void logstr(NSString *str) {
 }
 
 @end
+

@@ -10,7 +10,7 @@
 #import "util.h"
 
 
-#define ICTLog(str) ZCLog([NSString stringWithFormat:@"%s第(%d)行:%@",__FUNCTION__,__LINE__,str])
+#define ICTLog(s,...) [LogStr function: (char *)__FUNCTION__ lineNumber:__LINE__ format:(s),##__VA_ARGS__]
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -19,19 +19,30 @@ NS_ASSUME_NONNULL_BEGIN
 #import <LogStr/LogStr.h>
  
  
- - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
- // Insert code here to initialize your application
- 
  //打印log初始化配置
  LogStr * log = [LogStr shareTools];
  //下面两种2选1
  
+ NSDate * date = [NSDate date];
+ NSDateFormatter * dateStringFormatter = [[NSDateFormatter alloc]init];
+ [dateStringFormatter setDateFormat:@"yyyy_MM_dd_HH_mm_ss"];
+ NSString * path1 = [dateStringFormatter stringFromDate:date];
+ NSDictionary * dic = [NSBundle mainBundle].infoDictionary;
+ NSString * name = dic[@"CFBundleName"];
+ NSString * version = dic[@"CFBundleShortVersionString"];
+ NSString * build = dic[@"CFBundleVersion"];
+ 
+ //软件名_version_build_time
+ NSString * path = [NSString stringWithFormat:@"%@_%@_%@_%@",name,version,build,path1];
+ 
+ log.currentPath = path;
+ 
+ 
+ 
  //使用默认配置，log在桌面输出
- // [log syncLogSetting];
- 
+  [log syncLogSetting];
  //自定义配置位置
- [log settingLogPath:@"/vault/Station/log.log"];
- 
+ //[log settingLogPath:@"/vault/Station/log.log"];
  
  
  
@@ -43,6 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
  #import <LogStr/util.h>
  
  logstr(@"viewDidLoad ...........");
+ ICTLog(@"%@%@",@"ice",@"hanpi");
  *************/
 
 
@@ -50,6 +62,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface LogStr : NSObject
+
+
+@property (nonatomic, copy) NSString *currentPath;
+
+
 
 //同步日志输出配置,默认配置
 - (BOOL)syncLogSetting;
@@ -62,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //log 位置
 - (NSString *)path;
-
++ (void)function:(char*)functionName lineNumber:(int)lineNumber format:(NSString*)format,...;
 
 void logstr(NSString *str);
 void ZCLog(NSString *str);
@@ -73,3 +90,4 @@ void ZCLog(NSString *str);
 
 
 NS_ASSUME_NONNULL_END
+
